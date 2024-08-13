@@ -15,7 +15,7 @@ export class WeatherService {
     const params = new HttpParams()
       .set('units', 'metric')
       .set('q', city)
-      .set('id', environment.API_KEY);
+      .set('appId', environment.API_KEY);
 
     return this.http.get<IWeather>(url, { params });
   }
